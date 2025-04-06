@@ -42,10 +42,12 @@ img {
 }
 
 p, #subhead {
-    opacity: .9;
-    font-weight: lighter;
+     font-style: italic;
       text-align: center;
-
+      max-width: 600px;
+      margin: 1.5rem auto 3rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
 }
 
     display: block;
@@ -106,23 +108,213 @@ h2 {
   <p>“Expression is my goal in art. Without that, the humanity is lost”</p>
 
 
-<h2>Table of Contents:</h2>
-<ul>
-    <li><a href="#One">One</a></li>
-    <li><a href="#Two">Two</a></li>
-    <li><a href="#Three">Three</a></li>
-    <li><a href="#Four">Four</a></li>
-</ul>
-<h2><a name="One">One</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-<h2><a name="Two">Two</a></h2>
-<p>Integer in elit ut odio vestibulum sagittis...</p>
-<h2><a name="Three">Three</a></h2>
-
-<p>Fusce leo leo, maximus vel urna ut, egestas ultricies massa...</p>
-<h2><a name="Four">Four</a></h2>
         <img src="Cooby.1.png" alt="Additional Image">
 
-<p>Morbi vestibulum massa vitae tortor vehicula rhoncus...</p>
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: white;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header styles */
+    .header {
+      position: relative;
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+    
+    .header-bg {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .header-bg::before {
+      content: "";
+      background-image: url('brush-stroke.png');
+      background-size: 100% 100%;
+      background-position: center;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .page-title {
+      font-family: "Playfair Display", serif;
+      font-size: 3.5rem;
+      color: white;
+      padding: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+   
+    
+    /* About section */
+    .about-section {
+      display: flex;
+      margin-bottom: 3rem;
+      background-color: #333;
+      color: white;
+    }
+    
+    .about-content {
+      padding: 2rem;
+      flex: 1;
+    }
+    
+    .about-content p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .about-image {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    
+    /* Navigation */
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      background-color: #e9e9e9;
+      margin-bottom: 2rem;
+    }
+    
+    .nav-item {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      background-color: #e9e9e9;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-item:hover {
+      background-color: #d4d4d4;
+    }
+    
+    .nav-item a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    
+    .divider-line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: #ccc;
+    }
+    
+    .divider-star {
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      color: #333;
+    }
+    
+    /* Footer/Contact section */
+    .footer {
+      background-color: #e9e9e9;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .footer h2 {
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+      }
+      
+      .page-title {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with brush stroke background -->
+    <header class="header">
+      <div class="header-bg">
+        <h1 class="page-title">About Me</h1>
+      </div>
+      
+    
+    <!-- About section with education info and portrait -->
+    <section class="about-section">
+      <div class="about-content">
+        <p>Currently studying Global Business and Design (GBDA) at the University of Waterloo, a fusion of design, business, tech, and humanities that makes me a versatile creative thinker.</p>
+        <br>
+        <p>My journey started with acrylic painting at 9, when I found a fascination for color, composition, and artistic storytelling. My art regularly explores techniques into abstract design with strong inspiration from both painting.</p>
+        <br>
+        <p>Graphic Design, UI/UX Design, Photography</p>
+        <br>
+        <p>Work - I've been freelancing for 2+ years, specializing in branding, web design, social media marketing and illustrations. My projects give me a wide array of skills both in the design and business world.</p>
+      </div>
+      <div class="about-image">
+        <img src="portrait.jpg" alt="Abstract portrait artwork">
+      </div>
+    </section>
+    
+    <!-- Navigation bar -->
+    <nav class="navigation">
+      <div class="nav-item"><a href="#">Home</a></div>
+      <div class="nav-item"><a href="#">The Gallery</a></div>
+      <div class="nav-item"><a href="#">About Me</a></div>
+      <div class="nav-item"><a href="#">Contact Me</a></div>
+    </nav>
+    
+    <!-- Decorative divider -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-star">★</div>
+      <div class="divider-line"></div>
+    </div>
+    
+    <!-- Footer/Contact section -->
+    <footer class="footer">
+      <h2>Contact info -Help - Etc.</h2>
+    </footer>
+  </div>
 </body>
 </html>
